@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一般社団法人 知のエグゼクティブサロン</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #f5f0e8;
+    --accent: #8b4513;
+    --gold: #c9a84c;
+    --light: #ede8dc;
+    --mid: #d4cdc0;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+background: var(–paper);
+color: var(–ink);
+font-family: ‘Noto Serif JP’, serif;
+font-weight: 300;
+overflow-x: hidden;
+line-height: 1.9;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.eyebrow {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.95rem;
+letter-spacing: 0.35em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 1.2rem;
+}
+
+.sec-title {
+font-size: 2.2rem;
+font-weight: 400;
+letter-spacing: 0.05em;
+line-height: 1.6;
+margin-bottom: 2rem;
+}
+
+/* ── HEADER ── */
+header {
+position: fixed;
+top: 0; left: 0; right: 0;
+z-index: 100;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.2rem 4rem;
+background: rgba(245, 240, 232, 0.94);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid var(–mid);
+}
+
+.logo {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.3rem;
+letter-spacing: 0.1em;
+font-weight: 600;
+}
+
+.logo span {
+display: block;
+font-size: 0.62rem;
+letter-spacing: 0.3em;
+color: var(–accent);
+font-weight: 400;
+margin-top: 0.15rem;
+}
+
+nav ul {
+display: flex;
+gap: 1.8rem;
+list-style: none;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+
+nav a {
+font-size: 0.82rem;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(–ink);
+transition: color 0.25s;
+position: relative;
+}
+
+nav a:hover { color: var(–accent); }
+
+/* ── HERO ── */
+.hero {
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 8rem 2rem 4rem;
+position: relative;
+background:
+radial-gradient(ellipse at 30% 20%, rgba(201, 168, 76, 0.10), transparent 55%),
+radial-gradient(ellipse at 75% 80%, rgba(139, 69, 19, 0.07), transparent 55%);
+}
+
+.hero::before {
+content: “知”;
+position: absolute;
+font-size: 42rem;
+font-weight: 200;
+color: rgba(139, 69, 19, 0.035);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+line-height: 1;
+pointer-events: none;
+user-select: none;
+}
+
+.hero-eyebrow {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1.1rem;
+letter-spacing: 0.4em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 2rem;
+position: relative;
+z-index: 2;
+}
+
+.hero h1 {
+font-size: 3.6rem;
+font-weight: 300;
+letter-spacing: 0.08em;
+line-height: 1.7;
+margin-bottom: 2.2rem;
+position: relative;
+z-index: 2;
+}
+
+.hero h1 strong {
+font-weight: 600;
+background: linear-gradient(120deg, var(–accent), var(–gold));
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.hero p {
+max-width: 640px;
+font-size: 1.05rem;
+color: #5a5048;
+margin-bottom: 3rem;
+position: relative;
+z-index: 2;
+}
+
+.hero-org {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 1rem;
+letter-spacing: 0.2em;
+color: var(–ink);
+position: relative;
+z-index: 2;
+}
+
+.hero-org .small {
+display: block;
+font-size: 0.78rem;
+letter-spacing: 0.15em;
+color: #8a7f72;
+margin-top: 0.4rem;
+font-family: ‘Noto Serif JP’, serif;
+}
+
+.scroll-cue {
+position: absolute;
+bottom: 2.5rem;
+left: 50%;
+transform: translateX(-50%);
+width: 1px;
+height: 60px;
+background: linear-gradient(to bottom, transparent, var(–accent));
+z-index: 2;
+}
+
+/* ── MISSION ── */
+.mission {
+padding: 8rem 2rem;
+background: var(–ink);
+color: var(–paper);
+text-align: center;
+}
+
+.mission .eyebrow { color: var(–gold); }
+
+.mission-inner {
+max-width: 760px;
+margin: 0 auto;
+}
+
+.mission .sec-title {
+color: #fff;
+font-size: 2.5rem;
+}
+
+.mission-body {
+font-size: 1rem;
+color: #cfc6ba;
+margin-bottom: 1.6rem;
+text-align: left;
+}
+
+.mission-quote {
+margin-top: 3rem;
+padding-top: 2.5rem;
+border-top: 1px solid rgba(201, 168, 76, 0.25);
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.3rem;
+color: var(–gold);
+letter-spacing: 0.04em;
+line-height: 2;
+}
+
+/* ── BUSINESS ── */
+.business {
+padding: 8rem 4rem;
+max-width: 1280px;
+margin: 0 auto;
+}
+
+.business-head {
+text-align: center;
+margin-bottom: 4rem;
+}
+
+.business-head .eyebrow { justify-content: center; display: block; }
+
+.biz-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1px;
+background: var(–mid);
+border: 1px solid var(–mid);
+}
+
+.biz-card {
+background: var(–paper);
+padding: 3rem 2.4rem;
+transition: background 0.3s;
+}
+
+.biz-card:hover { background: var(–light); }
+
+.biz-num {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.85rem;
+letter-spacing: 0.3em;
+color: var(–gold);
+margin-bottom: 1.2rem;
+}
+
+.biz-card h3 {
+font-size: 1.25rem;
+font-weight: 600;
+margin-bottom: 1rem;
+letter-spacing: 0.04em;
+}
+
+.biz-card p {
+font-size: 0.88rem;
+color: #6b6157;
+}
+
+/* ── SALON ── */
+.salon {
+padding: 8rem 4rem;
+background: var(–light);
+}
+
+.salon-inner {
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.salon-head { text-align: center; margin-bottom: 4rem; }
+.salon-head .eyebrow { justify-content: center; display: block; }
+
+.salon-lead {
+max-width: 720px;
+margin: 0 auto 1rem;
+text-align: center;
+color: #5a5048;
+font-size: 0.98rem;
+}
+
+.salon-meta {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+margin: 3.5rem 0;
+}
+
+.meta-card {
+background: var(–paper);
+border: 1px solid var(–mid);
+padding: 2rem;
+text-align: center;
+}
+
+.meta-card .label {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.78rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.8rem;
+}
+
+.meta-card .value {
+font-size: 1.15rem;
+font-weight: 400;
+letter-spacing: 0.04em;
+}
+
+.meta-card .sub {
+font-size: 0.78rem;
+color: #8a7f72;
+margin-top: 0.5rem;
+}
+
+.schedule {
+margin-top: 3.5rem;
+}
+
+.schedule h4 {
+text-align: center;
+font-size: 1.1rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+margin-bottom: 1.8rem;
+}
+
+.sched-table {
+width: 100%;
+border-collapse: collapse;
+background: var(–paper);
+border: 1px solid var(–mid);
+font-size: 0.85rem;
+}
+
+.sched-table th, .sched-table td {
+padding: 0.9rem 1.2rem;
+border-bottom: 1px solid var(–mid);
+text-align: left;
+}
+
+.sched-table th {
+font-family: ‘Cormorant Garamond’, serif;
+letter-spacing: 0.18em;
+font-size: 0.72rem;
+text-transform: uppercase;
+color: var(–accent);
+background: var(–light);
+font-weight: 600;
+}
+
+.sched-table tr:last-child td { border-bottom: none; }
+
+.sched-table .num {
+font-family: ‘Cormorant Garamond’, serif;
+color: var(–gold);
+font-weight: 600;
+width: 3rem;
+}
+
+/* ── COORDINATORS ── */
+.coordinators {
+margin-top: 5rem;
+}
+
+.coordinators h4 {
+text-align: center;
+font-size: 1.1rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+margin-bottom: 2.5rem;
+}
+
+.coord-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.6rem;
+}
+
+.coord-card {
+background: var(–paper);
+border: 1px solid var(–mid);
+padding: 1.8rem;
+}
+
+.coord-role {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.7rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.5rem;
+}
+
+.coord-name {
+font-size: 1.05rem;
+font-weight: 600;
+margin-bottom: 0.6rem;
+letter-spacing: 0.04em;
+}
+
+.coord-desc {
+font-size: 0.78rem;
+color: #6b6157;
+line-height: 1.8;
+}
+
+/* ── LEADERSHIP ── */
+.leadership {
+padding: 8rem 4rem;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.leadership-head { text-align: center; margin-bottom: 4rem; }
+.leadership-head .eyebrow { justify-content: center; display: block; }
+
+.leader {
+display: grid;
+grid-template-columns: 200px 1fr;
+gap: 3rem;
+align-items: start;
+margin-bottom: 5rem;
+padding-bottom: 4rem;
+border-bottom: 1px solid var(–mid);
+}
+
+.leader:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.leader-photo {
+aspect-ratio: 3/4;
+background: linear-gradient(150deg, var(–light), var(–mid));
+border: 1px solid var(–mid);
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.72rem;
+letter-spacing: 0.2em;
+color: #a89c8e;
+text-transform: uppercase;
+text-align: center;
+}
+
+.leader-role {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.85rem;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.6rem;
+}
+
+.leader-name {
+font-size: 1.7rem;
+font-weight: 600;
+letter-spacing: 0.08em;
+margin-bottom: 1.4rem;
+}
+
+.leader-bio {
+font-size: 0.92rem;
+color: #5a5048;
+margin-bottom: 1rem;
+}
+
+.leader-quote {
+margin-top: 1.4rem;
+padding-left: 1.2rem;
+border-left: 2px solid var(–gold);
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 1.05rem;
+color: var(–accent);
+line-height: 1.8;
+}
+
+/* ── ABOUT ── */
+.about {
+padding: 8rem 4rem;
+background: var(–light);
+}
+
+.about-inner {
+max-width: 900px;
+margin: 0 auto;
+}
+
+.about-head { text-align: center; margin-bottom: 4rem; }
+.about-head .eyebrow { justify-content: center; display: block; }
+
+.about-table {
+width: 100%;
+border-collapse: collapse;
+background: var(–paper);
+border: 1px solid var(–mid);
+}
+
+.about-table tr {
+border-bottom: 1px solid var(–mid);
+}
+
+.about-table tr:last-child { border-bottom: none; }
+
+.about-table th, .about-table td {
+padding: 1.3rem 2rem;
+text-align: left;
+font-size: 0.92rem;
+font-weight: 400;
+vertical-align: top;
+}
+
+.about-table th {
+width: 180px;
+font-family: ‘Cormorant Garamond’, serif;
+letter-spacing: 0.2em;
+font-size: 0.75rem;
+text-transform: uppercase;
+color: var(–accent);
+background: var(–light);
+}
+
+/* ── LINKS ── */
+#links {
+padding: 6rem 4rem;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.links-inner .eyebrow { justify-content: center; display: block; text-align: center; }
+.links-inner .sec-title { text-align: center; }
+
+.links-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.4rem;
+margin-top: 2.5rem;
+}
+
+.link-card {
+display: flex;
+align-items: center;
+gap: 1rem;
+background: var(–paper);
+border: 1px solid var(–mid);
+padding: 1.6rem 1.5rem;
+transition: border-color 0.25s, transform 0.25s;
+}
+
+.link-card:hover {
+border-color: var(–gold);
+transform: translateY(-3px);
+}
+
+.link-card-icon { font-size: 1.6rem; }
+
+.link-card-label {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.68rem;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.3rem;
+}
+
+.link-card-name {
+font-size: 0.88rem;
+line-height: 1.5;
+}
+
+/* ── CONTACT ── */
+.contact {
+padding: 8rem 4rem;
+background: var(–ink);
+color: var(–paper);
+text-align: center;
+}
+
+.contact .eyebrow { color: var(–gold); justify-content: center; display: block; }
+
+.contact-inner { max-width: 760px; margin: 0 auto; }
+
+.contact h2 {
+font-size: 2.2rem;
+font-weight: 400;
+letter-spacing: 0.08em;
+margin-bottom: 2rem;
+color: #fff;
+}
+
+.contact-lead {
+font-size: 0.95rem;
+color: #cfc6ba;
+margin-bottom: 3rem;
+}
+
+.contact-cards {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+text-align: left;
+}
+
+.contact-card {
+border: 1px solid rgba(201, 168, 76, 0.25);
+padding: 1.8rem;
+}
+
+.contact-card label {
+display: block;
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.72rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–gold);
+margin-bottom: 0.8rem;
+}
+
+.contact-card p {
+font-size: 0.92rem;
+color: #e8e2d8;
+}
+
+.contact-card a:hover { color: var(–gold); }
+
+/* ── FOOTER ── */
+footer {
+padding: 2.5rem 4rem;
+background: var(–ink);
+border-top: 1px solid rgba(201, 168, 76, 0.15);
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.6rem;
+text-align: center;
+}
+
+.footer-name {
+font-family: ‘Cormorant Garamond’, serif;
+font-size: 0.85rem;
+letter-spacing: 0.18em;
+color: #cfc6ba;
+}
+
+.footer-copy {
+font-size: 0.72rem;
+color: #8a7f72;
+letter-spacing: 0.05em;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+header { padding: 1rem 1.5rem; }
+nav ul { display: none; }
+.hero h1 { font-size: 2.4rem; }
+.hero::before { font-size: 24rem; }
+.business, .salon, .leadership, .about, #links, .contact, .mission { padding: 5rem 1.5rem; }
+.biz-grid { grid-template-columns: 1fr; }
+.salon-meta { grid-template-columns: 1fr; }
+.coord-grid { grid-template-columns: 1fr; }
+.leader { grid-template-columns: 1fr; }
+.leader-photo { max-width: 200px; }
+.links-grid { grid-template-columns: 1fr; }
+.contact-cards { grid-template-columns: 1fr; }
+.about-table th { width: 110px; font-size: 0.65rem; padding: 1rem; }
+.about-table td { padding: 1rem; font-size: 0.85rem; }
+.sched-table { font-size: 0.72rem; }
+.sched-table th, .sched-table td { padding: 0.6rem 0.5rem; }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    知のエグゼクティブサロン
+    <span>GENERAL INCORPORATED ASSOCIATION</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#business">Business</a></li>
+      <li><a href="#salon">Salon</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">Salon of Wisdom</div>
+  <h1>知を深め、<br><strong>善く生きる</strong>ための場をつくる</h1>
+  <p>
+    日本のリーダーに足りないのは、教養だ。私たちは、出世のための知識ではなく、「いかに生きるか」という軸となる本来の教養——心の体幹を鍛える、水平型・対話型・創発型の知的コミュニティを提供します。
+  </p>
+  <div class="hero-org">
+    一般社団法人 知のエグゼクティブサロン
+    <span class="small">Salon of Wisdom, General Incorporated Association</span>
+  </div>
+  <div class="scroll-cue"></div>
+</section>
+
+<section class="mission" id="mission">
+  <div class="mission-inner">
+    <div class="eyebrow">Our Mission</div>
+    <h2 class="sec-title">日本のリーダーに足りないのは、<br>教養だ</h2>
+    <p class="mission-body">
+      世界のリーダー像が、いま大きく変わろうとしています。各国が自国の主張を優先し、異なる価値観がぶつかり合う中で、ロジカルな対話だけでは世界と渡り合えない時代に、リーダーたちの「生き方」そのものが問われています。
+    </p>
+    <p class="mission-body">
+      教養とは、出世するための道具ではありません。本来は、「人がよりよく生きるための指針」となるものです。「いかに生きるのか」という基軸を自分の中に養うこと——この「心の体幹」こそが、不確実性の高い環境で意思決定を行うための土台となります。
+    </p>
+    <p class="mission-body">
+      かつては、著名な学者が一方的に「知」を授ける、あるいは大企業のトップ経験者がその成功体験を語るダウンロード型の学びが主流でした。しかし現在、「知」そのものはオープンソースであり、その解釈や、そこからどのように新しい価値を創造していくのか、その前提となる価値観は何なのか——そうした「知」から生み出される新たな価値が重要な時代になっています。
+    </p>
+    <p class="mission-body">
+      私たちは、水平型・対話型・創発型の知的コミュニティを通じて、経営者・リーダーが自らの人生を見つめ直し、ビジネスを超えた新たな領域に向けて一歩を踏み出すための、貴重な場を提供します。
+    </p>
+    <div class="mission-quote">
+      経営とは、生き方そのものである。
+    </div>
+  </div>
+</section>
+
+<section class="business" id="business">
+  <div class="business-head">
+    <div class="eyebrow">Our Business</div>
+    <h2 class="sec-title">事業内容</h2>
+  </div>
+  <div class="biz-grid">
+    <div class="biz-card">
+      <div class="biz-num">01 — Main Pillar</div>
+      <h3>知のエグゼクティブサロン</h3>
+      <p>多摩大学サステナビリティ経営研究所との共催による、エグゼクティブ向け有料プログラム。学者・有識者とのフラットな対話を通じて、経営を超えた知の探究を行います。</p>
+    </div>
+    <div class="biz-card">
+      <div class="biz-num">02</div>
+      <h3>プライベートサロン運営</h3>
+      <p>東京・軽井沢を中心に、ニセコ・京都にも展開。少人数・招待制で、経営者・有識者が学び合う私的な知的交流の場を運営します。</p>
+    </div>
+    <div class="biz-card">
+      <div class="biz-num">03</div>
+      <h3>企業向け社員研修</h3>
+      <p>企業の役員・次世代リーダー層を対象に、教養・リベラルアーツを軸とした研修プログラムを企画・提供します。</p>
+    </div>
+    <div class="biz-card">
+      <div class="biz-num">04</div>
+      <h3>講演・セミナー</h3>
+      <p>経営、資本主義、教養、人生哲学などをテーマに、企業・団体・大学等での講演・セミナーを行います。</p>
+    </div>
+    <div class="biz-card">
+      <div class="biz-num">05</div>
+      <h3>執筆・出版</h3>
+      <p>書籍・論考・書評等の執筆活動を通じて、教養と経営をつなぐ視座を広く社会に発信します。</p>
+    </div>
+    <div class="biz-card">
+      <div class="biz-num">06</div>
+      <h3>顧問業務</h3>
+      <p>企業経営者・経営層に対し、ガバナンス・経営戦略・人材育成等に関する顧問・アドバイザリー業務を行います。</p>
+    </div>
+  </div>
+</section>
+
+<section class="salon" id="salon">
+  <div class="salon-inner">
+    <div class="salon-head">
+      <div class="eyebrow">Flagship Program</div>
+      <h2 class="sec-title">知のエグゼクティブサロン</h2>
+    </div>
+    <p class="salon-lead">
+      AIをはじめとするITの進歩や組織のフラット化が進む中、エグゼクティブ教育のあり方も大きな変容を迫られています。本サロンでは「知」をダウンロードする講師、「知」を授かる受講生というステイタスは設けません。各回、話題を提供するリソースパーソン（学者・有識者）とファシリテーターのみを設定し、一流のビジネスパーソンと学者・有識者がフラットに対話できる、水平型・対話型・創発型の新しいサロンです。
+    </p>
+    <p class="salon-lead">
+      多様な一流の人々と対等に交わることで、自らの人生を見つめ直し、自らの立ち位置を確認し、ビジネスを超える新たな領域に向けて一歩を踏み出すための、貴重な場を提供します。
+    </p>
+
+```
+<div class="salon-meta">
+  <div class="meta-card">
+    <div class="label">Period</div>
+    <div class="value">2026年4月〜12月</div>
+    <div class="sub">土曜日午後・全8回</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Venue</div>
+    <div class="value">日立製作所</div>
+    <div class="sub">Lumada Innovation Hub Tokyo（丸の内 サピアタワー17F）</div>
+  </div>
+  <div class="meta-card">
+    <div class="label">Tuition</div>
+    <div class="value">個人 60万円</div>
+    <div class="sub">企業派遣 90万円（消費税別・企業担当者2回参加可）</div>
+  </div>
+</div>
+
+<div class="schedule">
+  <h4>開催スケジュール（2026年度・全8回）</h4>
+  <table class="sched-table">
+    <tr>
+      <th>回</th><th>日程</th><th>内容</th>
+    </tr>
+    <tr><td class="num">01</td><td>4月25日（土）</td><td>オリエンテーション＋講演会</td></tr>
+    <tr><td class="num">02</td><td>5月9日（土）</td><td>講演会（人類史・生命科学）</td></tr>
+    <tr><td class="num">03</td><td>6月20日（土）</td><td>サロン（資本主義・経済・経営）</td></tr>
+    <tr><td class="num">04</td><td>7月18日（土）</td><td>サロン（宗教・哲学・思想）</td></tr>
+    <tr><td class="num">05</td><td>9月5日（土）</td><td>サロン（国家・政治・社会）</td></tr>
+    <tr><td class="num">06</td><td>10月17日（土）</td><td>サロン（歴史・文明・人類）</td></tr>
+    <tr><td class="num">07</td><td>11月28日（土）</td><td>サロン（人生・教育・芸術）</td></tr>
+    <tr><td class="num">08</td><td>12月12日（土）</td><td>講演会（AI・量子力学・宇宙物理学）</td></tr>
+  </table>
+</div>
+
+<div class="coordinators">
+  <h4>プログラムコーディネーター</h4>
+  <div class="coord-grid">
+    <div class="coord-card">
+      <div class="coord-role">Coordinator</div>
+      <div class="coord-name">岩井 睦雄</div>
+      <div class="coord-desc">日本たばこ産業株式会社（JT）社友。組織文化改革、事業責任者等を経て取締役会長を退任。経済同友会副代表幹事、TDK社外取締役、NHK経営委員等を務める。</div>
+    </div>
+    <div class="coord-card">
+      <div class="coord-role">Coordinator</div>
+      <div class="coord-name">三尾 徹</div>
+      <div class="coord-desc">株式会社ミオアンドカンパニー代表取締役。外資系投資銀行でM&Aや企業金融に携わった後、事業投資会社を設立。社会課題解決を目指す企業・非営利団体を支援。</div>
+    </div>
+    <div class="coord-card">
+      <div class="coord-role">Coordinator</div>
+      <div class="coord-name">篠田 真貴子</div>
+      <div class="coord-desc">エール株式会社取締役。社外人材によるオンライン1on1を通じて組織改革を支援。日本長期信用銀行、マッキンゼー等を経て、ノバルティス・ネスレで日本法人CFOを歴任。</div>
+    </div>
+    <div class="coord-card">
+      <div class="coord-role">Coordinator</div>
+      <div class="coord-name">高津 尚志</div>
+      <div class="coord-desc">IMDアフィリエイト（前・IMD北東アジア代表）。スイス・IMDビジネススクールで15年間、企業のグローバル経営幹部育成施策の設計・提供に従事。</div>
+    </div>
+    <div class="coord-card">
+      <div class="coord-role">Coordinator</div>
+      <div class="coord-name">黒田 由貴子</div>
+      <div class="coord-desc">株式会社ピープルフォーカス・コンサルティング 顧問・ファウンダー。組織開発・リーダーシップ開発のコンサルティング、エグゼクティブコーチング等を多数手がける。</div>
+    </div>
+    <div class="coord-card">
+      <div class="coord-role">Coordinator</div>
+      <div class="coord-name">木村 尚敬</div>
+      <div class="coord-desc">株式会社経営共創基盤（IGPI）共同経営者。製造業を中心に全社経営改革・事業化など、様々なステージにおける戦略策定と実行支援を推進。</div>
+    </div>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<section class="leadership" id="leadership">
+  <div class="leadership-head">
+    <div class="eyebrow">Leadership</div>
+    <h2 class="sec-title">代表理事</h2>
+  </div>
+
+  <div class="leader">
+    <div class="leader-photo">Tsutomu<br>Horiuchi</div>
+    <div>
+      <div class="leader-role">Co-Representative Director</div>
+      <div class="leader-name">堀内 勉</div>
+      <p class="leader-bio">
+        多摩大学サステナビリティ経営研究所所長、一般社団法人100年企業戦略研究所所長。東京大学法学部卒、ハーバード大学ロースクール修士課程修了、東京大学エグゼクティブ・マネジメント・プログラム修了。日本興業銀行（現みずほ銀行）、ゴールドマンサックス証券、森ビル専務取締役CFOなどを歴任。
+      </p>
+      <p class="leader-bio">
+        資本主義研究をライフワークとし、多様な分野の学者やビジネスパーソンと資本主義の研究会を主催。著書に『読書大全』『人生を変える読書』『ファイナンスの哲学』『資本主義はどこに向かうのか（共著）』などがある。
+      </p>
+      <div class="leader-quote">
+        「いかに生きるのか」という基軸を自分の中に養うこと——この心の体幹こそが、不確実性の高い時代を生き抜くための拠り所となる。
+      </div>
+    </div>
+  </div>
+
+  <div class="leader">
+    <div class="leader-photo">Mutsuo<br>Iwai</div>
+    <div>
+      <div class="leader-role">Co-Representative Director</div>
+      <div class="leader-name">岩井 睦雄</div>
+      <p class="leader-bio">
+        日本たばこ産業株式会社（JT）社友。日本専売公社（現JT）で、主に企画部門にて組織文化改革、コントローラー、ビジネスディベロップメントなどを経験。食品事業部長として加ト吉買収等を手掛ける。事業責任者としてジュネーブ勤務、たばこ事業責任者等を経て、2026年3月に取締役会長を退任。
+      </p>
+      <p class="leader-bio">
+        現在は、経済同友会副代表幹事、TDK社外取締役、NHK経営委員、日本アスペン研究所副理事長等を務める。
+      </p>
+      <div class="leader-quote">
+        組織文化の変革は、経営トップ自身の生き方の変革から始まる。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-head">
+      <div class="eyebrow">About Us</div>
+      <h2 class="sec-title">法人概要</h2>
+    </div>
+    <table class="about-table">
+      <tr>
+        <th>法人名</th>
+        <td>一般社団法人 知のエグゼクティブサロン<br>Salon of Wisdom, General Incorporated Association</td>
+      </tr>
+      <tr>
+        <th>設立</th>
+        <td>2026年7月1日</td>
+      </tr>
+      <tr>
+        <th>代表理事</th>
+        <td>堀内 勉　／　岩井 睦雄</td>
+      </tr>
+      <tr>
+        <th>事業内容</th>
+        <td>知のエグゼクティブサロンの運営、プライベートサロン運営、企業向け社員研修、講演・セミナー、執筆・出版、顧問業務</td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td>東京都港区元麻布</td>
+      </tr>
+      <tr>
+        <th>連携機関</th>
+        <td>多摩大学サステナビリティ経営研究所、一般社団法人100年企業戦略研究所</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section id="links">
+  <div class="links-inner">
+    <div class="eyebrow">Related Links</div>
+    <h2 class="sec-title">関連リンク</h2>
+    <div class="links-grid">
+      <a href="https://www.tama.ac.jp/sustainability/" target="_blank" rel="noopener" class="link-card">
+        <div class="link-card-icon">🎓</div>
+        <div>
+          <div class="link-card-label">University</div>
+          <div class="link-card-name">多摩大学サステナビリティ経営研究所</div>
+        </div>
+      </a>
+      <a href="#salon" class="link-card">
+        <div class="link-card-icon">📋</div>
+        <div>
+          <div class="link-card-label">Seminar</div>
+          <div class="link-card-name">2026年度 知のエグゼクティブサロン 詳細・申込</div>
+        </div>
+      </a>
+      <a href="#" class="link-card">
+        <div class="link-card-icon">🏢</div>
+        <div>
+          <div class="link-card-label">Institute</div>
+          <div class="link-card-name">一般社団法人 100年企業戦略研究所</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="eyebrow">Contact</div>
+    <h2>お問い合わせ</h2>
+    <p class="contact-lead">
+      エグゼクティブサロンへの参加申し込み、<br>
+      講演・セミナー依頼、企業研修・出版・取材のご相談など<br>
+      お気軽にお問い合わせください。
+    </p>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <label>知のエグゼクティブサロン</label>
+        <p>多摩大学サステナビリティ経営研究所 事務局<br>
+        <a href="mailto:info@tama-csm.org">info@tama-csm.org</a></p>
+      </div>
+      <div class="contact-card">
+        <label>講演・研修・顧問・その他</label>
+        <p>一般社団法人 知のエグゼクティブサロン<br>
+        <a href="mailto:info@wisdom-salon.jp">info@wisdom-salon.jp</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">一般社団法人 知のエグゼクティブサロン　Salon of Wisdom</div>
+  <div class="footer-copy">© 2026 Salon of Wisdom. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
