@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>実績・活動｜一般社団法人 知のエグゼクティブサロン｜Wisdom Salon</title>
-<meta name="description" content="知のエグゼクティブサロンの開催予定のプログラム、過去の実績、サロン活動（東京・軽井沢・京都）、雑誌等紹介記事、参考図書。">
+<meta name="description" content="知のエグゼクティブサロンの開催予定のプログラム、過去の実績、サロン活動（東京・軽井沢・京都）、雑誌等紹介記事、動画、参考図書。">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="一般社団法人 知のエグゼクティブサロン">
 <meta property="og:title" content="実績・活動｜一般社団法人 知のエグゼクティブサロン｜Wisdom Salon">
-<meta property="og:description" content="知のエグゼクティブサロンの開催予定のプログラム、過去の実績、サロン活動（東京・軽井沢・京都）、雑誌等紹介記事、参考図書。">
+<meta property="og:description" content="知のエグゼクティブサロンの開催予定のプログラム、過去の実績、サロン活動（東京・軽井沢・京都）、雑誌等紹介記事、動画、参考図書。">
 <meta property="og:url" content="https://wisdom-salon.jp/activities.html">
 <meta property="og:image" content="https://wisdom-salon.jp/images/logo_light@2x.png">
 <meta property="og:locale" content="ja_JP">
@@ -603,6 +603,26 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 .kz-thumbs button:focus-visible{outline:2px solid var(--g);outline-offset:-2px}
 .kz-thumbs img{width:100%;height:100%;object-fit:cover}
 @media (prefers-reduced-motion:reduce){.kz-main .kz-slide{transition:none}}
+/* videos */
+.video-intro{font-family:var(--serif);font-size:15px;color:var(--sub);margin:-24px 0 28px}
+.videos{list-style:none;display:grid;grid-template-columns:minmax(0,1fr);gap:24px}
+.video-card{min-width:0;background:#fff;border:1px solid var(--line);border-left:3px solid var(--au);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.video-thumb{position:relative;aspect-ratio:16/9;background:var(--g);overflow:hidden}
+.video-thumb img,.video-thumb iframe{display:block;width:100%;height:100%;object-fit:cover;border:0}
+.video-play{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;cursor:pointer;display:grid;place-items:center}
+.video-play::before{content:"";width:68px;height:48px;border-radius:12px;background:rgba(35,64,46,.9);border:1px solid rgba(255,255,255,.7);box-shadow:0 4px 18px rgba(0,0,0,.25);transition:background .3s,transform .3s}
+.video-play::after{content:"";position:absolute;width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:17px solid #fff;margin-left:4px}
+.video-play:hover::before,.video-play:focus-visible::before{background:var(--rd);transform:scale(1.06)}
+html:not(.js) .video-play{display:none}
+.video-body{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1;min-width:0}
+.video-date{font-family:var(--serif);font-size:12px;letter-spacing:.12em;color:var(--au-t)}
+.video-card h3{font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.65;letter-spacing:.03em;color:var(--g);margin-top:8px;overflow-wrap:anywhere}
+.video-meta{display:flex;flex-wrap:wrap;gap:2px 16px;margin-top:12px;font-size:12px;color:var(--sub)}
+.video-desc{font-size:13px;line-height:1.9;margin-top:16px;overflow-wrap:anywhere}
+.video-link{align-self:flex-start;margin-top:auto;padding-top:18px;font-size:12.5px;letter-spacing:.08em;text-decoration:none;color:var(--g);border-bottom:1px solid var(--aul);line-height:1.5}
+.video-link:hover{color:var(--rd);border-color:var(--rd)}
+@media (min-width:1024px){.videos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.video-body{padding:20px 20px 22px}.video-card h3{font-size:17px}.video-intro{margin-top:-18px}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -615,7 +635,7 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 </div></header>
 
 <main id="main">
-<section class="phero" id="top"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">トップ</a></li><li aria-current="page"><span class="nw">実績・活動</span></li></ol></nav><p class="en">Activities</p><h1><span class="nw">実績・活動</span></h1><div class="rule"></div><ul class="ptoc" aria-label="このページの内容"><li><a href="#upcoming">開催予定の<wbr>プログラム</a></li><li><a href="#history">過去の<wbr>実績（<wbr><span class="nw">2023-2026年度）</span></a></li><li><a href="#activities"><span class="nw">サロン活動紹介</span></a></li><li><a href="#media">雑誌等紹介記事</a></li><li><a href="#books">参考図書</a></li></ul></div></section>
+<section class="phero" id="top"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">トップ</a></li><li aria-current="page"><span class="nw">実績・活動</span></li></ol></nav><p class="en">Activities</p><h1><span class="nw">実績・活動</span></h1><div class="rule"></div><ul class="ptoc" aria-label="このページの内容"><li><a href="#upcoming">開催予定の<wbr>プログラム</a></li><li><a href="#history">過去の<wbr>実績（<wbr><span class="nw">2023-2026年度）</span></a></li><li><a href="#activities"><span class="nw">サロン活動紹介</span></a></li><li><a href="#media">雑誌等紹介記事</a></li><li><a href="#videos">動画</a></li><li><a href="#books">参考図書</a></li></ul></div></section>
 <section class="sec iv" id="upcoming"><div class="wrap">
 <div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">01</span></span><div class="sht"><p class="en">Upcoming</p><h2>開催予定の<wbr>プログラム</h2></div></div>
 <div class="progcard" data-r><p class="pc-st"><span class="chip chip-up">開催予定</span></p><h3 class="pc-t">「<span class="nw">AI</span><wbr>時代を<wbr>生きる<wbr>経営者<span class="nw">のための</span><wbr><span class="nw">リベラルアーツ</span><wbr>集中講座」</h3><p class="pc-co"><span class="chip">共催</span><span>知の<wbr><span class="nw">エグゼクティブサロン</span>・<wbr>日経<span class="nw">BP</span></span></p><p class="pc-note">詳細は<wbr>決まり次第、<wbr>こちらで<wbr>お知らせします。</p></div>
@@ -764,8 +784,34 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 </a>
 </div>
 </div></section>
-<section class="sec iv" id="books"><div class="wrap">
-<div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">05</span></span><div class="sht"><p class="en">Books</p><h2>参考図書</h2></div></div>
+<section class="sec iv" id="videos"><div class="wrap">
+<div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">05</span></span><div class="sht"><p class="en">Videos</p><h2>動画</h2></div></div>
+<p class="video-intro">公開日の新しい順に掲載しています。</p>
+<ol class="videos">
+<li class="video-card" data-r>
+<div class="video-thumb"><img src="https://i.ytimg.com/vi/jCS_Y5IWRMY/hqdefault.jpg" alt="【資産が増えるほど人生は苦しくなる】森ビル元CFOに聞く資本主義の罠の抜け出し方とは？｜堀内勉『生きるための教養』" width="480" height="360" loading="lazy"><button class="video-play" type="button" data-video-id="jCS_Y5IWRMY" aria-label="【資産が増えるほど人生は苦しくなる】森ビル元CFOに聞く資本主義の罠の抜け出し方とは？｜堀内勉『生きるための教養』 を再生"></button></div>
+<div class="video-body"><p class="video-date"><time datetime="2026-11-04" class="nw">2026年11月4日</time> 公開</p><h3>【資産が<wbr>増えるほど<wbr>人生は<wbr><span class="nw">苦しくなる】</span><wbr><span class="nw">森ビル元CFO</span>に<wbr>聞く<wbr>資本主義の<wbr>罠の<wbr><span class="nw">抜け出し方</span>とは？<wbr><span class="nw">｜堀内勉</span><wbr><span class="nw">『生きるための教養』</span></h3><p class="video-meta"><span class="nw">M&amp;A CAMP</span><span class="nw">再生時間 1:27:48</span></p><p class="video-desc"><span class="nw">『生きるための教養』</span>の<wbr>著者・<wbr><span class="nw">堀内勉</span>への<wbr>インタビューです。<wbr>資本主義とは<wbr>何か、<wbr>お金が<wbr>増えても<wbr>不安が<wbr>減らないのは<wbr>なぜか、<wbr>幸せに<wbr>生きるとは、<wbr>教養とは<wbr>何かを<wbr>語ります。</p><a class="video-link" href="https://www.youtube.com/watch?v=jCS_Y5IWRMY" target="_blank" rel="noopener">YouTubeで見る <span aria-hidden="true">↗</span></a></div>
+</li>
+<li class="video-card" data-r>
+<div class="video-thumb"><img src="https://i.ytimg.com/vi/ufRk3AzH4lk/hqdefault.jpg" alt="マネジメントから（自己啓発を経て）「教養」へ。産業資本主義の歴史を問い直す 堀内勉×宇野常寛" width="480" height="360" loading="lazy"><button class="video-play" type="button" data-video-id="ufRk3AzH4lk" aria-label="マネジメントから（自己啓発を経て）「教養」へ。産業資本主義の歴史を問い直す 堀内勉×宇野常寛 を再生"></button></div>
+<div class="video-body"><p class="video-date"><time datetime="2026-10-23" class="nw">2026年10月23日</time> 公開</p><h3>マネジメントから<wbr>（自己啓発を<wbr><span class="nw">経て）</span><wbr><span class="nw">「教養」へ。</span><wbr>産業資本主義の<wbr>歴史を<wbr>問い直す <span class="nw">堀内勉</span><wbr><span class="nw">×宇野常寛</span></h3><p class="video-meta"><span class="nw">PLANETS YouTubeチャンネル</span><span class="nw">再生時間 31:55</span></p><p class="video-desc"><span class="nw">堀内勉</span><wbr><span class="nw">『生きるための教養』</span><span class="nw">（東洋経済新報社）</span><wbr>をめぐり、<wbr>評論家・<wbr><span class="nw">PLANETS編集長</span>の<wbr><span class="nw">宇野常寛</span>氏と<wbr>対談。<wbr>マネジメントから<wbr>自己啓発を<wbr>経て<wbr><span class="nw">「教養」へと</span><wbr>至る、<wbr>産業資本主義の<wbr>歴史を<wbr>問い直します。</p><a class="video-link" href="https://www.youtube.com/watch?v=ufRk3AzH4lk" target="_blank" rel="noopener">YouTubeで見る <span aria-hidden="true">↗</span></a></div>
+</li>
+<li class="video-card" data-r>
+<div class="video-thumb"><img src="https://i.ytimg.com/vi/f__vJMkdH-I/hqdefault.jpg" alt="AI 時代に「教養」を問い直すー教養を「自分のもの」にするとは│堀内勉×谷川嘉浩×宇野常寛" width="480" height="360" loading="lazy"><button class="video-play" type="button" data-video-id="f__vJMkdH-I" aria-label="AI 時代に「教養」を問い直すー教養を「自分のもの」にするとは│堀内勉×谷川嘉浩×宇野常寛 を再生"></button></div>
+<div class="video-body"><p class="video-date"><time datetime="2026-10-22" class="nw">2026年10月22日</time> 公開</p><h3><span class="nw">AI 時代</span>に<wbr><span class="nw">「教養」を</span><wbr>問い直すー<wbr>教養を<wbr><span class="nw">「自分のもの」に</span><wbr>するとは│<wbr><span class="nw">堀内勉</span><wbr><span class="nw">×谷川嘉浩</span><wbr><span class="nw">×宇野常寛</span></h3><p class="video-meta"><span class="nw">楽天大学ラボ【公式】</span><span class="nw">再生時間 1:15:34</span></p><p class="video-desc"><span class="nw">生成AI</span>が<wbr>知的生産の<wbr>一部まで<wbr>担うように<wbr>なった今、<wbr>教養を<wbr>学ぶ意味とは<wbr>何か。<wbr><span class="nw">堀内勉</span>と<wbr>哲学者の<wbr><span class="nw">谷川嘉浩</span>氏を<wbr>ゲストに、<wbr>評論家の<wbr><span class="nw">宇野常寛</span>氏が<wbr>聞き手と<wbr>なり、<wbr><span class="nw">AI時代</span>の<wbr><span class="nw">「教養」の</span><wbr>あり方を<wbr>問い直す<wbr>対談です。</p><a class="video-link" href="https://www.youtube.com/watch?v=f__vJMkdH-I" target="_blank" rel="noopener">YouTubeで見る <span aria-hidden="true">↗</span></a></div>
+</li>
+<li class="video-card" data-r>
+<div class="video-thumb"><img src="https://i.ytimg.com/vi/uXlYGGtggFQ/hqdefault.jpg" alt="【現金isキング】森ビルの元CFOにお金との向き合い方を聞いてきた| 堀内勉" width="480" height="360" loading="lazy"><button class="video-play" type="button" data-video-id="uXlYGGtggFQ" aria-label="【現金isキング】森ビルの元CFOにお金との向き合い方を聞いてきた| 堀内勉 を再生"></button></div>
+<div class="video-body"><p class="video-date"><time datetime="2025-01-31" class="nw">2025年1月31日</time> 公開</p><h3><span class="nw">【現金isキング】</span><wbr><span class="nw">森ビルの元CFO</span>に<wbr>お金との<wbr>向き合い方を<wbr>聞いてきた<wbr><span class="nw">| 堀内勉</span></h3><p class="video-meta"><span class="nw">M&amp;A CAMP</span><span class="nw">再生時間 1:21:03</span></p><p class="video-desc"><span class="nw">M&amp;A CAMP</span>による<wbr>インタビューです。<wbr><span class="nw">森ビルCFO</span>や<wbr><span class="nw">ゴールドマン・サックス</span>での<wbr>経歴、<wbr><span class="nw">リーマンショック</span>の<wbr>影響、<wbr>資本主義への<wbr>疑問、<wbr><span class="nw">『読書大全』</span>と<wbr>読書への<wbr>向き合い方などを<wbr>語ります。</p><a class="video-link" href="https://www.youtube.com/watch?v=uXlYGGtggFQ" target="_blank" rel="noopener">YouTubeで見る <span aria-hidden="true">↗</span></a></div>
+</li>
+<li class="video-card" data-r>
+<div class="video-thumb"><img src="https://i.ytimg.com/vi/ypeChQhrrNw/hqdefault.jpg" alt="ビジネスリーダーとしての羅針盤を持つために～MBA＆人類の知と歴史～多摩大学社会的投資研究所教授・副所長 堀内勉" width="480" height="360" loading="lazy"><button class="video-play" type="button" data-video-id="ypeChQhrrNw" aria-label="ビジネスリーダーとしての羅針盤を持つために～MBA＆人類の知と歴史～多摩大学社会的投資研究所教授・副所長 堀内勉 を再生"></button></div>
+<div class="video-body"><p class="video-date"><time datetime="2021-08-25" class="nw">2021年8月25日</time> 公開</p><h3>ビジネスリーダーとしての<wbr>羅針盤を<wbr><span class="nw">持つために～</span><wbr>MBA＆<wbr>人類の<wbr>知と<wbr>歴史～<wbr>多摩大学<wbr>社会的投資研究所<wbr>教授・<wbr>副所長 <span class="nw">堀内勉</span></h3><p class="video-meta"><span>GLOBIS学び放題×知見録</span><span class="nw">再生時間 1:31:50</span></p><p class="video-desc"><span class="nw">グロービス経営大学院</span> <span class="nw">開学15周年記念セミナー</span><span class="nw">（2021年8月11日開催）</span><wbr>の講演です。<wbr><span class="nw">『読書大全』</span>の<wbr>著者・<wbr><span class="nw">堀内勉</span>が、<wbr>多忙な<wbr>実業家が<wbr>なぜ読書を<wbr>するのか、<wbr>ビジネスリーダーに<wbr>求められる<wbr>読書とは<wbr>何かを、<wbr>人類の<wbr>知と<wbr>歴史を<wbr>通して<wbr>語ります。<wbr>出演：<wbr><span class="nw">堀内勉、</span><wbr><span class="nw">田久保善彦</span>（<span class="nw">グロービス経営大学院</span> 経営研究科 <span class="nw">研究科長）</span>。</p><a class="video-link" href="https://www.youtube.com/watch?v=ypeChQhrrNw" target="_blank" rel="noopener">YouTubeで見る <span aria-hidden="true">↗</span></a></div>
+</li>
+</ol>
+</div></section>
+<section class="sec" id="books"><div class="wrap">
+<div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">06</span></span><div class="sht"><p class="en">Books</p><h2>参考図書</h2></div></div>
 <ul class="books"><li class="book" data-r><a href="https://str.toyokeizai.net/books/9784492048443/" target="_blank" rel="noopener" aria-label="『生きるための教養』東洋経済新報社の書籍ページを新しいタブで開く"><figure class="cover"><img src="images/book_ikiru_300.webp" srcset="images/book_ikiru_300.webp 300w, images/book_ikiru_600.webp 600w" sizes="(max-width:760px) 45vw, 200px" alt="『生きるための教養（上）』表紙" width="300" height="426" loading="lazy" decoding="async"></figure><h3><span class="nw">『生きるための教養』</span><wbr>（上・下巻）</h3><p class="bsub">混迷の<wbr>時代を、<wbr>君たちは<wbr><span class="nw">どう生きるか</span></p><p class="bmeta"><span class="nw">堀内 勉 著</span><span><span class="nw">東洋経済</span>新報社</span></p><span class="ext">出版社サイトで見る<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2H2v8h8V7.5M7 1h4v4M11 1 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span></a></li><li class="book" data-r><a href="https://bookplus.nikkei.com/atcl/catalog/21/S00160/" target="_blank" rel="noopener" aria-label="『読書大全』日経BPの書籍ページを新しいタブで開く"><figure class="cover"><img src="images/book_dokusho_300.webp" srcset="images/book_dokusho_300.webp 300w, images/book_dokusho_600.webp 600w" sizes="(max-width:760px) 45vw, 200px" alt="『読書大全』表紙" width="300" height="426" loading="lazy" decoding="async"></figure><h3><span class="nw">『読書大全』</span></h3><p class="bsub">世界の<wbr>ビジネスリーダーが<wbr>読んでいる<wbr>経済・<wbr>哲学・<wbr>歴史・科学<span class="nw">200冊</span></p><p class="bmeta"><span class="nw">堀内 勉 著</span><span>日経<span class="nw">BP</span></span></p><span class="ext">出版社サイトで見る<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2H2v8h8V7.5M7 1h4v4M11 1 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span></a></li><li class="book" data-r><a href="https://bookplus.nikkei.com/atcl/catalog/21/P89000/" target="_blank" rel="noopener" aria-label="『LISTEN』日経BPの書籍ページを新しいタブで開く"><figure class="cover"><img src="images/book_listen_300.webp" srcset="images/book_listen_300.webp 300w, images/book_listen_600.webp 600w" sizes="(max-width:760px) 45vw, 200px" alt="『LISTEN』表紙" width="300" height="427" loading="lazy" decoding="async"></figure><h3>『LISTEN』</h3><p class="bsub">知性豊かで<wbr>創造力が<wbr>ある人になれる</p><p class="bmeta"><span class="nw">ケイト・マーフィ 著／</span><wbr><span class="nw">篠田 真貴子 監訳／</span><wbr><span class="nw">松丸 さとみ 訳</span><span>日経<span class="nw">BP</span></span></p><span class="ext">出版社サイトで見る<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2H2v8h8V7.5M7 1h4v4M11 1 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span></a></li><li class="book" data-r><a href="https://presidentstore.jp/item/005281.html" target="_blank" rel="noopener" aria-label="『JTの変革力』プレジデント社の書籍ページを新しいタブで開く"><figure class="cover"><img src="images/book_jt_300.webp" srcset="images/book_jt_300.webp 300w, images/book_jt_500.webp 500w" sizes="(max-width:760px) 45vw, 200px" alt="『JTの変革力』表紙" width="300" height="440" loading="lazy" decoding="async"></figure><h3><span class="nw">『JTの変革力』</span></h3><p class="bsub">健全な<wbr>危機感を<wbr><span class="nw">羅針盤</span>に<wbr>した経営戦略</p><p class="bmeta"><span class="nw">岩井 睦雄 著</span><span>プレジデント社</span></p><span class="ext">出版社サイトで見る<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2H2v8h8V7.5M7 1h4v4M11 1 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span></a></li><li class="book" data-r><a href="https://bookplus.nikkei.com/atcl/catalog/25/01/10/01811/" target="_blank" rel="noopener" aria-label="『世界の経営幹部はなぜ日本に感化されるのか』日経BP 日本経済新聞出版の書籍ページを新しいタブで開く"><figure class="cover"><img src="images/book_sekai_300.webp" srcset="images/book_sekai_300.webp 300w, images/book_sekai_600.webp 600w" sizes="(max-width:760px) 45vw, 200px" alt="『世界の経営幹部はなぜ日本に感化されるのか』表紙" width="300" height="437" loading="lazy" decoding="async"></figure><h3>『世界の<wbr>経営幹部は<wbr>なぜ日本に<wbr>感化されるのか』</h3><p class="bsub">伝統文化の<wbr>叡智に<wbr>学ぶビジネスの未来</p><p class="bmeta"><span class="nw">高津 尚志 著</span><span>日経<span class="nw">BP</span> 日本経済新聞出版</span></p><span class="ext">出版社サイトで見る<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2H2v8h8V7.5M7 1h4v4M11 1 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.1"/></svg></span></a></li></ul>
 </div></section>
 <a class="nextpg" href="index.html"><div class="wrap"><div><small>トップへ<wbr>戻る — <span class="nw">Top</span></small><b>トップ</b></div><em aria-hidden="true">→</em></div></a>
@@ -782,6 +828,17 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 (()=>{
 const mq=matchMedia('(prefers-reduced-motion: reduce)');let rm=mq.matches;mq.addEventListener?.('change',e=>{rm=e.matches;if(rm){$$('[data-r]').forEach(el=>el.classList.add('in'));if(hl){hl.style.transform='';hl.style.opacity=''}}});const hasIO='IntersectionObserver' in window;
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// Load YouTube only after a visitor chooses a video.
+$$('#videos .video-play').forEach(button=>button.addEventListener('click',()=>{
+ const thumb=button.closest('.video-thumb'),card=button.closest('.video-card');
+ const frame=document.createElement('iframe');
+ frame.title=card.querySelector('h3').textContent;
+ frame.setAttribute('allow','accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+ frame.setAttribute('allowfullscreen','');
+ frame.referrerPolicy='strict-origin-when-cross-origin';
+ frame.src=`https://www.youtube-nocookie.com/embed/${button.dataset.videoId}?autoplay=1&rel=0`;
+ thumb.replaceChildren(frame);
+}));
 // Karuizawa photo gallery
 const kz=$('#kz-gallery');
 if(kz){
