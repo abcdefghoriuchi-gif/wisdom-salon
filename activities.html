@@ -591,7 +591,18 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 @media (max-width:1024px){.pvis{grid-template-columns:170px 1fr;gap:22px}}
 @media (max-width:760px){.pvis{grid-template-columns:120px 1fr;gap:16px}.pgal ul{grid-template-columns:repeat(2,1fr)}.pty1{font-size:30px}.pty2{font-size:15px}.pty3{font-size:10.5px}.ptypo{padding:14px}.pstrip ul{gap:12px 10px}.pstrip li{width:62px}.pstrip img{width:54px;height:54px}}
 @media (max-width:480px){.pvis{grid-template-columns:1fr}.pfly{max-width:190px}.ptypo{aspect-ratio:auto;max-width:none;flex-direction:row;align-items:center;gap:16px;padding:14px 18px}.pty2{margin-top:0}.pty3{margin-top:0;border-top:0;border-left:1px solid rgba(176,141,74,.5);padding:0 0 0 14px}.pchips li{font-size:12px;padding:4px 12px}}
-.act .img.has-ph{position:relative;overflow:hidden;background:#ece6d6}.act .img.has-ph{display:grid;grid-template-rows:1fr auto;gap:4px;padding:0;background:transparent}.act .img.has-ph>img{grid-row:1;grid-column:1;width:100%;height:100%;min-height:0;object-fit:cover;border-radius:4px}.act .img.has-ph>b{grid-row:1;grid-column:1;align-self:end;justify-self:start;margin:0 0 8px 12px;color:#fff;font-size:clamp(16px,1.6vw,22px);text-shadow:0 1px 8px rgba(0,0,0,.45)}.kz-thumbs{grid-row:2;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.kz-thumbs li{aspect-ratio:4/3;overflow:hidden;border-radius:3px;background:#ece6d6}.kz-thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.act .img.has-ph{display:grid;grid-template-rows:minmax(0,1fr) 44px;gap:4px;align-items:stretch;justify-content:stretch;padding:0;background:transparent;overflow:hidden}
+.kz-main{position:relative;min-height:0;overflow:hidden;border-radius:4px;background:#ece6d6}
+.kz-main .kz-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease}
+.kz-main .kz-slide.is-active{opacity:1}
+.act .img.has-ph .kz-main>b{position:absolute;z-index:1;left:6px;bottom:6px;padding:0 6px;border-radius:2px;background:rgba(0,0,0,.42);color:#fff;font-size:clamp(16px,1.6vw,22px)}
+.kz-thumbs{list-style:none;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;min-width:0}
+.kz-thumbs li{min-width:0}
+.kz-thumbs button{display:block;width:100%;height:44px;padding:0;border:2px solid transparent;border-radius:3px;background:#ece6d6;cursor:pointer;overflow:hidden}
+.kz-thumbs button[aria-pressed="true"]{border-color:var(--au)}
+.kz-thumbs button:focus-visible{outline:2px solid var(--g);outline-offset:-2px}
+.kz-thumbs img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion:reduce){.kz-main .kz-slide{transition:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -719,7 +730,25 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 <div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">03</span></span><div class="sht"><p class="en">Activities</p><h2><span class="nw">サロン活動紹介</span></h2><p class=shsub>東京・軽井沢・京都</p></div></div>
 <div class="acts">
 <div class="act" data-r><div class="img"><b>TOKYO</b>写真 準備中</div><div class="bd"><h3>東京</h3><div class="placeholder"><span class="ph-tag">準備中</span><p>活動内容</p></div></div></div>
-<div class="act" data-r style="--d:100ms"><div class="img has-ph"><img src="images/kz_library_800.webp" srcset="images/kz_library_800.webp 800w, images/kz_library_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="軽井沢サロンの様子。書架に囲まれた会場で語り合う参加者" width="800" height="600" loading="lazy" decoding="async"><b>KARUIZAWA</b><ul class="kz-thumbs"><li><img src="images/kz_gallery_800.webp" alt="軽井沢サロンの様子。ギャラリーで展示を見る参加者" width="800" height="600" loading="lazy" decoding="async"></li><li><img src="images/kz_kiln_800.webp" alt="軽井沢サロンの様子。和室で器を囲む参加者" width="800" height="600" loading="lazy" decoding="async"></li><li><img src="images/kz_shoin_800.webp" alt="軽井沢サロンの様子。「志音窯」の扁額" width="800" height="600" loading="lazy" decoding="async"></li><li><img src="images/kz_matsutake_800.webp" alt="軽井沢サロンの様子。食卓に並んだ松茸" width="800" height="600" loading="lazy" decoding="async"></li></ul></div><div class="bd"><h3>軽井沢</h3><div class="placeholder"><span class="ph-tag">準備中</span><p>活動内容</p></div></div></div>
+<div class="act" data-r style="--d:100ms"><div class="img has-ph" id="kz-gallery">
+<div class="kz-main">
+<img class="kz-slide is-active" src="images/kz_library_800.webp" srcset="images/kz_library_800.webp 800w, images/kz_library_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="書架に囲まれた会場で語り合う参加者" width="800" height="600" loading="lazy" decoding="async">
+<img class="kz-slide" src="images/kz_gallery_800.webp" srcset="images/kz_gallery_800.webp 800w, images/kz_gallery_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="ギャラリーで展示を見る参加者" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
+<img class="kz-slide" src="images/kz_kiln_800.webp" srcset="images/kz_kiln_800.webp 800w, images/kz_kiln_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="和室で器を囲む参加者" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
+<img class="kz-slide" src="images/kz_shoin_800.webp" srcset="images/kz_shoin_800.webp 800w, images/kz_shoin_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="「志音窯」の扁額" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
+<img class="kz-slide" src="images/kz_matsutake_800.webp" srcset="images/kz_matsutake_800.webp 800w, images/kz_matsutake_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="食卓に並んだ松茸" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
+<img class="kz-slide" src="images/kz_books_800.webp" srcset="images/kz_books_800.webp 800w, images/kz_books_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="机に並べられた本" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
+<img class="kz-slide" src="images/kz_lobby_800.webp" srcset="images/kz_lobby_800.webp 800w, images/kz_lobby_1600.webp 1600w" sizes="(max-width:760px) 92vw, 380px" alt="ロビーに集まった参加者" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
+<b>KARUIZAWA</b></div>
+<ul class="kz-thumbs" aria-label="軽井沢の写真を選択">
+<li><button type="button" aria-label="書架に囲まれた会場の写真を表示" aria-pressed="true"><img src="images/kz_library_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+<li><button type="button" aria-label="ギャラリーの写真を表示" aria-pressed="false"><img src="images/kz_gallery_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+<li><button type="button" aria-label="和室の写真を表示" aria-pressed="false"><img src="images/kz_kiln_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+<li><button type="button" aria-label="志音窯の扁額の写真を表示" aria-pressed="false"><img src="images/kz_shoin_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+<li><button type="button" aria-label="松茸の写真を表示" aria-pressed="false"><img src="images/kz_matsutake_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+<li><button type="button" aria-label="机に並べられた本の写真を表示" aria-pressed="false"><img src="images/kz_books_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+<li><button type="button" aria-label="ロビーに集まった参加者の写真を表示" aria-pressed="false"><img src="images/kz_lobby_800.webp" alt="" width="800" height="600" loading="lazy" decoding="async"></button></li>
+</ul></div><div class="bd"><h3>軽井沢</h3><div class="placeholder"><span class="ph-tag">準備中</span><p>活動内容</p></div></div></div>
 <div class="act" data-r style="--d:200ms"><div class="img"><b>KYOTO</b>写真 準備中</div><div class="bd"><h3>京都</h3><div class="placeholder"><span class="ph-tag">準備中</span><p>活動内容</p></div></div></div>
 </div>
 </div></section>
@@ -753,6 +782,18 @@ a.pfly:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(35,64,46,.14
 (()=>{
 const mq=matchMedia('(prefers-reduced-motion: reduce)');let rm=mq.matches;mq.addEventListener?.('change',e=>{rm=e.matches;if(rm){$$('[data-r]').forEach(el=>el.classList.add('in'));if(hl){hl.style.transform='';hl.style.opacity=''}}});const hasIO='IntersectionObserver' in window;
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+// Karuizawa photo gallery
+const kz=$('#kz-gallery');
+if(kz){
+ const slides=[...kz.querySelectorAll('.kz-slide')],buttons=[...kz.querySelectorAll('.kz-thumbs button')];
+ let current=0,timer=null;
+ const show=i=>{current=i;slides.forEach((slide,n)=>{const active=n===i;slide.classList.toggle('is-active',active);slide.setAttribute('aria-hidden',String(!active))});buttons.forEach((button,n)=>button.setAttribute('aria-pressed',String(n===i)))};
+ const stop=()=>{if(timer){clearInterval(timer);timer=null}};
+ const start=()=>{if(!mq.matches&&!timer)timer=setInterval(()=>show((current+1)%slides.length),4000)};
+ buttons.forEach((button,i)=>button.addEventListener('click',()=>{show(i);stop();start()}));
+ mq.addEventListener?.('change',()=>{stop();start()});
+ start();
+}
 // reveal
 if(hasIO&&!rm){
  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px',threshold:.06});
