@@ -553,8 +553,11 @@ body.pg-sub .brand{opacity:1;visibility:visible;transform:none}
 .press .pgo{display:inline-block;margin-top:16px;font-size:12.5px;letter-spacing:.08em;color:var(--g);border-bottom:1px solid var(--aul);padding-bottom:2px}
 @media (max-width:760px){.vcards{grid-template-columns:1fr}.vcard{padding:24px 22px}.press h3{font-size:16.5px}}
 /* compact article list (scoped to #media so history cards stay unchanged) */
-#media .mcard.press{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:2px;padding:13px 36px 13px 14px;border:0;border-bottom:1px solid var(--line);border-left:3px solid var(--au);border-radius:0;background:transparent;transition:background .3s}
+#media .mcard.press{position:relative;display:flex;flex-direction:row;align-items:flex-start;gap:0;padding:12px 36px 12px 10px;border:0;border-bottom:1px solid var(--line);border-left:3px solid var(--au);border-radius:0;background:transparent;transition:background .3s}
 #media .mcard.press:hover,#media .mcard.press:focus-visible{box-shadow:none;background:var(--iv)}
+#media .mthumb{display:block;flex:0 0 200px;width:200px;aspect-ratio:16/9;margin:0 16px 0 0;border-radius:2px;overflow:hidden;background:#eee;line-height:0;align-self:flex-start}
+#media .mthumb img{display:block;width:100%;height:100%;object-fit:cover}
+#media .mbody{flex:1;min-width:0;padding-top:1px}
 #media .press .pm{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;margin:0;font-size:11.5px;letter-spacing:.1em}
 #media .press .pk{margin:0;font-size:11.5px;line-height:1.6;color:var(--sub)}
 #media .press h3{margin:2px 0 0;font-size:16px;line-height:1.55;letter-spacing:.02em;color:var(--g)}
@@ -563,7 +566,12 @@ body.pg-sub .brand{opacity:1;visibility:visible;transform:none}
 #media .press .pgo{position:absolute;right:10px;top:14px;margin:0;padding:0;border:0;font-size:0;line-height:1;letter-spacing:0;color:var(--g)}
 #media .press .pgo [aria-hidden]{font-size:15px;line-height:1}
 #media .mcard.press:hover .pgo,#media .mcard.press:focus-visible .pgo{color:var(--rd)}
-@media (max-width:760px){#media .mcard.press{padding:12px 32px 12px 12px}#media .press h3{font-size:15px;line-height:1.5}}
+#media .media + .credit{margin:10px 0 0;text-align:right}
+@media (max-width:760px){
+ #media .mcard.press{padding:10px 32px 10px 8px}
+ #media .mthumb{flex:0 0 136px;width:136px;margin:0 10px 0 0}
+ #media .press h3{font-size:15px;line-height:1.5}
+}
 /* v8: 過去の実績（告知ページ・関連記事リンク） */
 .pyears{border-top:1px solid var(--line)}
 .pyr{display:grid;grid-template-columns:150px 1fr;gap:32px;padding:34px 0;border-bottom:1px solid var(--line)}
@@ -822,27 +830,37 @@ html:not(.js) .video-play{display:none}
 <div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">04</span></span><div class="sht"><p class="en">Media</p><h2>雑誌等紹介記事</h2></div></div>
 <div class="media" data-r>
 <a class="mcard press" href="https://jbpress.ismedia.jp/articles/-/97887" target="_blank" rel="noopener">
+<span class="mthumb"><img src="images/jbpress_97887_400.webp" srcset="images/jbpress_97887_400.webp 400w, images/jbpress_97887_800.webp 800w" sizes="(max-width:760px) 136px, 200px" alt="『生きるための教養』（下）と『君は、君だけの人生を歩め』の表紙を背景に、対談する堀内勉と伊藤羊一" width="400" height="225" loading="lazy" decoding="async"></span>
+<span class="mbody">
 <p class="pm"><span class="pmed"><span class="nw">JBpress</span></span><span class="pd"><span class="nw">2026.11.08</span></span></p>
 <p class="pk">「なぜこの本書いた？」<wbr>特別対談（後編）</p>
-<h3><span class="t1">「<span class="nw">AIが書いた文章は</span><wbr>感動しない」</span><span class="t2"><span class="nw">AI自身に</span><wbr>理由を聞いてみたら…<wbr>人間にしかできないこと、<wbr>働く意味とは？</span></h3>
+<h3><span class="t1">「<span class="nw">AIが書いた文章は</span><wbr>感動しない」</span><span class="t2"><span class="nw">AI自身に</span><wbr>理由を聞いてみたら…<wbr>人間にしか<wbr>できない<span class="nw">こと、</span><wbr>働く意味とは？</span></h3>
 <p class="pb"><span class="nw">『生きるための教養』の</span><wbr>著者・<wbr><span class="nw">堀内 勉</span>と、<wbr><span class="nw">『君は、君だけの人生を歩め』の</span><wbr><span class="nw">著者・伊藤 羊一</span>の対談記事です。</p>
+</span>
 <span class="pgo"><span class="nw">記事を読む</span><wbr>（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
 </a>
 <a class="mcard press" href="https://jbpress.ismedia.jp/articles/-/97885" target="_blank" rel="noopener">
+<span class="mthumb"><img src="images/jbpress_97885_400.webp" srcset="images/jbpress_97885_400.webp 400w, images/jbpress_97885_800.webp 800w" sizes="(max-width:760px) 136px, 200px" alt="『生きるための教養』（上）と『君は、君だけの人生を歩め』の表紙を背景に、対談する堀内勉と伊藤羊一" width="400" height="225" loading="lazy" decoding="async"></span>
+<span class="mbody">
 <p class="pm"><span class="pmed"><span class="nw">JBpress</span></span><span class="pd"><span class="nw">2026.11.07</span></span></p>
 <p class="pk">「なぜこの本書いた？」<wbr>特別対談（前編）</p>
 <h3><span class="t1"><span class="nw">AIが答えを出す時代、</span><wbr>何を信じて生きる？</span><span class="t2"><span class="nw">東大・興銀出身</span>の<wbr><span class="nw">2人が語る、</span><wbr>他人の評価に<wbr>縛られない生き方</span></h3>
 <p class="pb"><span class="nw">『生きるための教養』の</span><wbr>著者・<wbr><span class="nw">堀内 勉</span>と、<wbr><span class="nw">『君は、君だけの人生を歩め』の</span><wbr><span class="nw">著者・伊藤 羊一</span>の対談記事です。</p>
+</span>
 <span class="pgo"><span class="nw">記事を読む</span><wbr>（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
 </a>
 <a class="mcard press" href="https://business.nikkei.com/atcl/NBD/19/special/02302/" target="_blank" rel="noopener">
+<span class="mthumb"><img src="images/nikkei_02302_400.webp" srcset="images/nikkei_02302_400.webp 400w, images/nikkei_02302_800.webp 800w" sizes="(max-width:760px) 136px, 200px" alt="書棚の前で手を上げて話す堀内勉" width="400" height="225" loading="lazy" decoding="async"></span>
+<span class="mbody">
 <p class="pm"><span class="pmed"><span class="nw">日経ビジネス電子版</span></span><span class="pd"><span class="nw">2025.10.24</span></span></p>
 <p class="pk">特集「<wbr><span class="nw">海図なきAI時代</span>の<wbr><span class="nw">羅針盤</span> <span class="nw">リベラルアーツ</span>が<wbr><span class="nw">リーダーを鍛える」</span><wbr><span class="nw">PART3</span></p>
 <h3><span class="t1"><span class="nw">識者が語る</span><wbr><span class="nw">リベラルアーツ</span>の価値</span><span class="t2"><span class="nw">人間と社会の理解</span>が<wbr><span class="nw">経営者の力になる</span></span></h3>
 <p class="pb"><span class="nw">By</span> 山崎 良兵 ほか<wbr><span class="nw">／</span><wbr>共同代表 堀内 勉が<wbr>登場しています。</p>
+</span>
 <span class="pgo"><span class="nw">記事を読む</span><wbr>（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
 </a>
 </div>
+<p class="credit">画像 © 各掲載媒体</p>
 </div></section>
 <section class="sec iv" id="videos"><div class="wrap">
 <div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">05</span></span><div class="sht"><p class="en">Videos</p><h2>動画</h2></div></div>
