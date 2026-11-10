@@ -1,0 +1,13 @@
+# Default Netlify subdomain → canonical host (force). Domain-specific rules first so they win over path-only rules.
+# Special-case index.html so we do not hop via the default-subdomain URL.
+https://wisdom-salon.netlify.app/index.html        https://wisdom-salon.jp/        301!
+http://wisdom-salon.netlify.app/index.html         https://wisdom-salon.jp/        301!
+https://wisdom-salon.netlify.app/2027/index.html   https://wisdom-salon.jp/2027/   301!
+http://wisdom-salon.netlify.app/2027/index.html    https://wisdom-salon.jp/2027/   301!
+https://wisdom-salon.netlify.app/*                  https://wisdom-salon.jp/:splat  301!
+http://wisdom-salon.netlify.app/*                   https://wisdom-salon.jp/:splat  301!
+
+# Primary domain: collapse index.html aliases. Destinations are slash URLs (no index.html), so these do not loop.
+# www → apex is already handled by the Netlify domain settings and is not repeated here.
+/index.html          /        301
+/2027/index.html     /2027/   301
