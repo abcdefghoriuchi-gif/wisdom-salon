@@ -562,9 +562,16 @@ body.pg-sub .brand{opacity:1;visibility:visible;transform:none}
 .pcards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
 .mcard.pcard{padding:22px 24px 20px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--au);border-radius:4px}
 .pcard h3{font-size:16.5px}
+@media (min-width:1025px){.pcards-2026 .pcard-announce{grid-column:1/-1}}
+.mcard.press.pcard-hasimg{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.pcard-thumb{display:block;background:#eee;line-height:0}
+.pcard-thumb img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;object-position:center 40%}
+.pcard-hasimg .pcard-inner{padding:18px 24px 20px;flex:1;display:flex;flex-direction:column}
+.pcard-hasimg .pgo{margin-top:auto}
+.pcards-2026 + .credit{margin:10px 0 0;text-align:right}
 .psrc{font-size:11.5px;color:var(--sub);margin-top:18px}
 @media (max-width:1024px){.pcards{grid-template-columns:1fr}}
-@media (max-width:760px){.pyr{grid-template-columns:1fr;gap:12px;padding:26px 0}.pyr h3{font-size:38px}.pcards{grid-template-columns:1fr}.mcard.pcard{padding:20px 20px 18px}.pcard .pm{flex-wrap:wrap;gap:2px 14px}.pcard h3{font-size:15.5px}}
+@media (max-width:760px){.pyr{grid-template-columns:1fr;gap:12px;padding:26px 0}.pyr h3{font-size:38px}.pcards{grid-template-columns:1fr}.mcard.pcard{padding:20px 20px 18px}.pcard-hasimg .pcard-inner{padding:16px 20px 16px}.pcard .pm{flex-wrap:wrap;gap:2px 14px}.pcard h3{font-size:15.5px}}
 /* v9: 過去の実績をビジュアル化（チラシ・写真・登壇者） */
 .pvis{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start}
 .pfly{display:block;position:relative;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:4px;overflow:hidden;box-shadow:0 10px 28px rgba(35,64,46,.08);transition:transform .4s,box-shadow .4s}
@@ -719,36 +726,46 @@ html:not(.js) .video-play{display:none}
 <div class="pstrip"><p class="plab">参加予定の<wbr><span class="nw">リソースパーソン</span><wbr>（一部・<wbr><span class="nw">2026年度</span><wbr>チラシより）</p><ul><li><img src="images/av_yasuda.jpg" alt="安田洋祐" width="64" height="64" loading="lazy" decoding="async"><span><span class="nw">安田洋祐</span></span></li><li><img src="images/av_nomura.jpg" alt="野村泰紀" width="64" height="64" loading="lazy" decoding="async"><span><span class="nw">野村泰紀</span></span></li><li><img src="images/av_ota.jpg" alt="太田博樹" width="64" height="64" loading="lazy" decoding="async"><span><span class="nw">太田博樹</span></span></li><li><img src="images/av_koizumi_1024.jpg" alt="小泉悠" width="64" height="64" loading="lazy" decoding="async"><span><span class="nw">小泉悠</span></span></li><li><img src="images/av_tamesue.jpg" alt="為末大" width="64" height="64" loading="lazy" decoding="async"><span><span class="nw">為末大</span></span></li><li><img src="images/av_suzuki.jpg" alt="鈴木優人" width="64" height="64" loading="lazy" decoding="async"><span><span class="nw">鈴木優人</span></span></li></ul><p class="pmore"><span class="nw">第1回</span>は<wbr><span class="nw">堀内勉、</span><wbr><span class="nw">第2回</span>は<wbr><span class="nw">太田博樹・</span><wbr><span class="nw">坪山幸太郎</span>の<wbr>各氏が<wbr>話題を提供。<span class="pms">出典：日立 <span class="nw">Digital</span> <span class="nw">Highlights</span> <span class="nw">開催レポート</span></span></p></div>
 </div>
 </div>
-<div class="pcards">
-<a class="mcard press pcard" href="https://www.tama-csm.org/executive/" target="_blank" rel="noopener">
+<div class="pcards pcards-2026">
+<a class="mcard press pcard pcard-announce" href="https://www.tama-csm.org/executive/" target="_blank" rel="noopener">
 <p class="pm"><span class="pmed"><span class="nw">多摩大学</span><wbr><span class="nw">サステナビリティ</span><wbr><span class="nw">経営研究所</span></span><span class="pd"><span class="nw">2026年度</span></span></p>
 <p class="pk">講座<span class="nw">告知ページ</span></p>
 <h3><span class="t1">知の<span class="nw">エグゼクティブサロン</span></span></h3>
 <p class="pb"><span class="nw">2026年度</span>の<wbr>日程・会場・<wbr>プログラムを掲載。</p>
 <span class="pgo"><span class="nw">告知ページ</span>を<wbr>見る（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
 </a>
-<a class="mcard press pcard" href="https://www.hitachi.com/ja-jp/products/digital/highlights/insights/key-leaders-voice/dh260005/" target="_blank" rel="noopener">
+<a class="mcard press pcard pcard-hasimg" href="https://www.hitachi.com/ja-jp/products/digital/highlights/insights/key-leaders-voice/dh260005/" target="_blank" rel="noopener">
+<span class="pcard-thumb"><img src="images/dh260005_800.webp" srcset="images/dh260005_800.webp 800w, images/dh260005_1280.webp 1280w" sizes="(max-width:1024px) 92vw, 440px" alt="スクリーンに「世界に対する問い」「人間に対する問い」を映し、演台で話す第1回開催の様子" width="800" height="400" loading="lazy" decoding="async"></span>
+<span class="pcard-inner">
 <p class="pm"><span class="pmed">日立 <span class="nw">Digital</span> <span class="nw">Highlights</span></span><span class="pd"><span class="nw">2026.09.28</span></span></p>
 <p class="pk"><span class="nw">開催レポート</span> <span class="nw">第1回</span></p>
 <h3><span class="t1">「教養とは何か」</span><span class="t2">教養とは<wbr>「<span class="nw">心の体幹」</span><wbr>を鍛えること</span></h3>
 <p class="pb">変化の<wbr>時代に、<wbr>どう生きるかを<wbr>問い直す回の<wbr>レポートです。</p>
 <span class="pgo">レポートを<wbr>読む（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
+</span>
 </a>
-<a class="mcard press pcard" href="https://www.hitachi.com/ja-jp/products/digital/highlights/insights/key-leaders-voice/dh260006/" target="_blank" rel="noopener">
+<a class="mcard press pcard pcard-hasimg" href="https://www.hitachi.com/ja-jp/products/digital/highlights/insights/key-leaders-voice/dh260006/" target="_blank" rel="noopener">
+<span class="pcard-thumb"><img src="images/dh260006_800.webp" srcset="images/dh260006_800.webp 800w, images/dh260006_1280.webp 1280w" sizes="(max-width:1024px) 92vw, 440px" alt="演台でマイクを持ち話す登壇者と、手前で聞く参加者の様子（第2回）" width="800" height="533" loading="lazy" decoding="async"></span>
+<span class="pcard-inner">
 <p class="pm"><span class="pmed">日立 <span class="nw">Digital</span> <span class="nw">Highlights</span></span><span class="pd"><span class="nw">2026.09.28</span></span></p>
 <p class="pk"><span class="nw">開催レポート</span> <span class="nw">第2回</span></p>
 <h3><span class="t1">「人間とは何か」</span><span class="t2"><span class="nw">ゲノムとAI</span>が<wbr>問いかける<wbr>「人間とは何か」</span></h3>
 <p class="pb">思考の<wbr>バイアスを<wbr>自覚する<wbr>回のレポートです。</p>
 <span class="pgo">レポートを<wbr>読む（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
+</span>
 </a>
-<a class="mcard press pcard" href="https://www.hitachi.com/ja-jp/products/digital/highlights/insights/key-leaders-voice/dh260007/" target="_blank" rel="noopener">
+<a class="mcard press pcard pcard-hasimg" href="https://www.hitachi.com/ja-jp/products/digital/highlights/insights/key-leaders-voice/dh260007/" target="_blank" rel="noopener">
+<span class="pcard-thumb"><img src="images/dh260007_800.webp" srcset="images/dh260007_800.webp 800w, images/dh260007_1280.webp 1280w" sizes="(max-width:1024px) 92vw, 440px" alt="Lumada Innovation Hub Tokyoの会場で、スクリーンの前に立つ登壇者と参加者の様子（第3回）" width="800" height="533" loading="lazy" decoding="async"></span>
+<span class="pcard-inner">
 <p class="pm"><span class="pmed">日立 <span class="nw">Digital</span> <span class="nw">Highlights</span></span><span class="pd"><span class="nw">2026.11.05</span></span></p>
 <p class="pk"><span class="nw">開催レポート</span> <span class="nw">第3回</span></p>
-<h3><span class="t1">資本主義をどう舵取りするか。</span><span class="t2">社会価値と<wbr>企業価値を結ぶ<wbr>リーダーシップ</span></h3>
-<p class="pb">ゲストは<wbr><span class="nw">安田洋祐氏</span>（<span class="nw">政策研究大学院大学</span><span class="nw">）と</span><wbr><span class="nw">渋澤健氏（コモンズ投信）</span>。<wbr>経営者講演会では<wbr><span class="nw">岩井睦雄氏（JT社友）が</span>登壇した回の<wbr>レポートです。</p>
+<h3><span class="t1">資本主義をどう<wbr>舵取りするか。</span><span class="t2">社会価値と<wbr>企業価値を結ぶ<wbr>リーダーシップ</span></h3>
+<p class="pb">ゲストは<wbr><span class="nw">安田洋祐氏</span>（<span class="nw">政策研究大学院大学</span><span class="nw">）と</span><wbr><span class="nw">渋澤健氏（コモンズ投信）</span>。<wbr>経営者講演会では<wbr><span class="nw">岩井睦雄氏（JT社友）が</span><wbr>登壇した回の<wbr>レポートです。</p>
 <span class="pgo">レポートを<wbr>読む（<span class="nw">外部サイト）</span> <span aria-hidden="true">↗</span></span>
+</span>
 </a>
 </div>
+<p class="credit">写真 © 日立 <span class="nw">Digital</span> <span class="nw">Highlights</span></p>
 </div></div>
 <p class="psrc">リンク先は<wbr>いずれも<wbr><span class="nw">外部サイト</span>です。<wbr>チラシ・<wbr><span class="nw">パンフレット</span>の<wbr>画像は<wbr>各年度の<wbr>主催者発行物です。<wbr>掲載内容・<wbr><span class="nw">URL</span>は<wbr>各サイトの<wbr>都合に<wbr>より変更される<wbr>場合があります。</p>
 </div>
