@@ -667,6 +667,43 @@ html:not(.js) .video-play{display:none}
  .video-play::before{width:36px;height:26px;border-radius:6px}
  .video-play::after{border-top-width:6px;border-bottom-width:6px;border-left-width:10px;margin-left:2px}
 }
+
+.ev .btn small{font-size:11px;letter-spacing:.06em;margin-left:2px;opacity:.85}
+.ev{max-width:1000px}
+.ev .pc-st{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ev-date{font-family:var(--en);font-size:20px;letter-spacing:.08em;color:var(--g);font-variant-numeric:lining-nums}
+.ev-date i{font-family:var(--serif);font-style:normal;font-size:11px;margin:0 6px 0 3px;color:var(--sub)}
+.ev-org{font-family:var(--serif);font-size:13px;letter-spacing:.18em;color:var(--au-t)}
+.ev-x{margin:0 .6em;color:var(--aul)}
+.ev .pc-t{font-size:clamp(21px,2.7vw,29px);margin-top:10px}
+.ev-lead{font-family:var(--serif);font-size:15px;line-height:1.9;color:var(--ink);margin-top:12px;word-break:keep-all}
+.ev-co{display:inline-flex;align-items:center;gap:10px;margin-right:14px}
+.ev-co .chip{flex-shrink:0;white-space:nowrap}
+.ev-pn small{display:inline}
+.ev-date i{display:inline}
+.ev-body{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.ev-tx{font-size:14px;line-height:2;color:var(--ink);word-break:normal;text-wrap:wrap;text-align:justify;margin-bottom:.6em}
+.ev-src{font-size:11.5px;color:var(--sub)}
+.ev-src a{color:var(--au-t)}
+.ev-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;margin-top:30px}
+.ev-h{font-size:11px;letter-spacing:.3em;color:var(--au-t);padding-bottom:10px;border-bottom:1px solid var(--au);margin-bottom:6px}
+.ev-h2{margin-top:26px}
+.ev-ppl ul{list-style:none}
+.ev-ppl li{padding:12px 0;border-bottom:1px solid var(--line)}
+.ev-pn{font-family:var(--serif);font-size:17px;color:var(--g);letter-spacing:.06em}
+.ev-pn small{font-size:12px;color:var(--sub);margin-left:3px}
+.ev-pr{font-size:12px;color:var(--sub);line-height:1.7;margin-top:2px;word-break:normal;text-wrap:wrap}
+.ev-pt{font-family:var(--serif);font-size:13px;line-height:1.7;margin-top:4px;color:var(--ink);word-break:normal;text-wrap:wrap}
+.ev-pt:before{content:"— ";color:var(--aul)}
+.ev-row{display:grid;grid-template-columns:5.2em 1fr;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.8}
+.ev-k{font-size:11px;letter-spacing:.2em;color:var(--sub);padding-top:3px}
+.ev-v{word-break:normal;text-wrap:wrap}
+.ev-sub{font-size:12px;color:var(--sub)}
+.ev-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.ev-cta .btn.pri{background:var(--g);border-color:var(--g);color:#fff}
+.ev-cta .btn.pri:before{background:var(--au)}
+.ev-cta .btn.pri:hover{border-color:var(--au)}
+@media (max-width:760px){.ev-grid{grid-template-columns:1fr;gap:30px}.ev-cta .btn{width:100%;justify-content:space-between}.ev-date{font-size:17px}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -682,7 +719,25 @@ html:not(.js) .video-play{display:none}
 <section class="phero" id="top"><div class="wrap"><nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">トップ</a></li><li aria-current="page"><span class="nw">実績・活動</span></li></ol></nav><p class="en">Activities</p><h1><span class="nw">実績・活動</span></h1><div class="rule"></div><ul class="ptoc" aria-label="このページの内容"><li><a href="#upcoming">開催予定の<wbr>プログラム</a></li><li><a href="#history">過去の<wbr>実績（<wbr><span class="nw">2023-2026年度）</span></a></li><li><a href="#activities"><span class="nw">サロン活動紹介</span></a></li><li><a href="#media">雑誌等紹介記事</a></li><li><a href="#videos">動画</a></li><li><a href="#books">参考図書</a></li></ul></div></section>
 <section class="sec iv" id="upcoming"><div class="wrap">
 <div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">01</span></span><div class="sht"><p class="en">Upcoming</p><h2>開催予定の<wbr>プログラム</h2></div></div>
-<div class="progcard" data-r><p class="pc-st"><span class="chip chip-up">開催予定</span></p><h3 class="pc-t">「<span class="nw">AI</span><wbr>時代を<wbr>生きる<wbr>経営者<span class="nw">のための</span><wbr><span class="nw">リベラルアーツ</span><wbr>集中講座」</h3><p class="pc-co"><span class="chip">共催</span><span>知の<wbr><span class="nw">エグゼクティブサロン</span>・<wbr>日経<span class="nw">BP</span></span></p><p class="pc-note">詳細は<wbr>決まり次第、<wbr>こちらで<wbr>お知らせします。</p></div>
+<article class="progcard ev" data-r>
+<p class="pc-st"><span class="chip chip-up">開催予定</span> <span class="ev-date"><span class="nw">2027.1.23</span><i>土</i>–<span class="nw">1.24</span><i>日</i></span></p>
+<p class="ev-org">日経ビジネス<span class="ev-x" aria-hidden="true">×</span>知の<span class="nw">エグゼクティブサロン</span></p>
+<h3 class="pc-t"><span class="nw">AI時代の</span><wbr><span class="nw">経営リーダーのための</span><wbr><span class="nw">リベラルアーツ</span><wbr><span class="nw">集中講座</span></h3>
+<p class="ev-lead">AIの専門家、<wbr>経営学者、<wbr>哲学者、<wbr>経営者同士の<wbr>対話から<br>AI時代に<wbr>自社が<wbr>進むべき<wbr>針路を<wbr>考える</p>
+<p class="pc-co"><span class="ev-co"><span class="chip">主催</span><span>日経ビジネス</span></span><span class="ev-co"><span class="chip">共催</span><span><span class="nw">一般社団法人</span> <span class="nw">知のエグゼクティブサロン</span></span></span></p>
+<div class="ev-body">
+<p class="ev-tx">本講座は、企業の将来像や経営のあり方について、考えを深め、将来像を考えたい<span class="nw">CEO</span>、社長、取締役、執行役員、次世代経営リーダーのための<span class="nw">2日間</span>の知的対話プログラムです。AI、哲学、経営学、企業経営、リベラルアーツ。異なる世界の第一人者の知見に触れ、<span class="nw">30人限定</span>の場で直接問いをぶつけ、さらに異業種の経営リーダー同士で議論します。</p>
+<p class="ev-tx">本講座を企画し、<span class="nw">2日間</span>を通じて対話を深めるのが、一般社団法人 知のエグゼクティブサロンの<span class="nw">2人</span>の共同代表です。</p>
+<p class="ev-src">出典：<a href="https://www.nikkeibp.co.jp/seminar/nb/liberal/" target="_blank" rel="noopener">日経ビジネス 講座ページ</a></p>
+</div>
+<div class="ev-grid">
+<div class="ev-ppl"><p class="ev-h">登壇者</p><ul><li><p class="ev-pn"><span class="nw">楠木&#8202;建</span><small>氏</small></p><p class="ev-pr">一橋大学特任教授／競争戦略の第一人者</p><p class="ev-pt">正解のない経営を、どう決めるか</p></li><li><p class="ev-pn"><span class="nw">澤田&#8202;純</span><small>氏</small></p><p class="ev-pr">NTT株式会社 取締役会長／京都哲学研究所 <span class="nw">共同代表理事</span></p><p class="ev-pt">技術と人間、価値観をどう両立させるか</p></li><li><p class="ev-pn"><span class="nw">朱&#8202;喜哲</span><small>氏</small></p><p class="ev-pr">哲学者／大阪大学社会技術共創研究センター招へい准教授</p><p class="ev-pt">AIと哲学</p></li><li><p class="ev-pn"><span class="nw">上野山&#8202;勝也</span><small>氏</small></p><p class="ev-pr">株式会社PKSHA Technology 代表取締役／<span class="nw">博士（機械学習）</span></p><p class="ev-pt">AIと人間は、どう共進化するのか</p></li><li><p class="ev-pn"><span class="nw">西山&#8202;圭太</span><small>氏</small></p><p class="ev-pr">東京大学未来ビジョン研究センター特任教授／<span class="nw">元経済産業省</span>商務情報政策局長</p><p class="ev-pt">AIは人間・仕事・会社・社会をどう<span class="nw">変えるのか</span></p></li></ul>
+<p class="ev-h ev-h2">コーディネーター</p><ul><li><p class="ev-pn"><span class="nw">岩井&#8202;睦雄</span><small>氏</small></p><p class="ev-pr">一般社団法人 知のエグゼクティブサロン 共同代表</p></li><li><p class="ev-pn"><span class="nw">堀内&#8202;勉</span><small>氏</small></p><p class="ev-pr">一般社団法人 知のエグゼクティブサロン 共同代表</p></li></ul></div>
+<div class="ev-ov"><p class="ev-h">開催概要</p><div class="ev-row"><div class="ev-k">名称</div><div class="ev-v">AI時代の経営リーダーのためのリベラルアーツ<span class="nw">集中講座</span></div></div><div class="ev-row"><div class="ev-k">日時</div><div class="ev-v"><span class="nw">2027年1月23日（土）</span> <span class="nw">9:30集合／10:00開始</span>～<span class="nw">19:30頃終了予定</span><br><span class="nw">2027年1月24日（日）</span> <span class="nw">9:30集合／10:00開始</span>～<span class="nw">17:30頃終了予定</span></div></div><div class="ev-row"><div class="ev-k">会場</div><div class="ev-v"><span class="nw">雅叙園東京</span>（東京・目黒）<br><span class="ev-sub"><span class="nw">東京都目黒区下目黒1-8-1</span></span></div></div><div class="ev-row"><div class="ev-k">開催形式</div><div class="ev-v">会場集合型・2日間集中<span class="nw">プログラム</span></div></div><div class="ev-row"><div class="ev-k">主催</div><div class="ev-v">日経ビジネス</div></div><div class="ev-row"><div class="ev-k">共催</div><div class="ev-v"><span class="nw">一般社団法人</span> <span class="nw">知のエグゼクティブサロン</span></div></div><div class="ev-row"><div class="ev-k">対象</div><div class="ev-v">CEO、社長、取締役、執行役員、事業責任者、次世代経営<span class="nw">リーダーなど</span></div></div><div class="ev-row"><div class="ev-k">定員</div><div class="ev-v">30名限定</div></div><div class="ev-row"><div class="ev-k">参加費</div><div class="ev-v"><span class="nw">495,000円</span>（税込）</div></div></div>
+</div>
+<div class="ev-cta"><a class="btn pri" href="https://www.nikkeibp.co.jp/seminar/nb/liberal/" target="_blank" rel="noopener"><span class="bt">講座の詳細・お申し込み<small>（日経ビジネス）</small></span> <span class="ar">→</span></a><a class="btn" href="https://ers.nikkeibp.co.jp/user/2027w0123la" target="_blank" rel="noopener"><span class="bt">お申し込みフォーム<small>（日経BP）</small></span> <span class="ar">→</span></a></div>
+<p class="pc-note">※ 掲載内容は<wbr>日経ビジネスの<wbr>講座ページ<wbr>（<span class="nw">2026年11月27日</span>時点）に<wbr>基づきます。<wbr>最新の情報は<wbr>講座ページを<wbr>ご確認ください。</p>
+</article>
 </div></section>
 <section class="sec" id="history"><div class="wrap">
 <div class="sh" data-r><span class="sno" aria-hidden="true"><span class="nw">02</span></span><div class="sht"><p class="en">History</p><h2>過去の<wbr>実績（<wbr><span class="nw">2023-2026年度）</span></h2></div></div>
